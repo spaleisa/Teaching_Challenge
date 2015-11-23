@@ -6,7 +6,7 @@ function log(obj) {
 // Create a new instance of the Mandrill class from the mandrill
 // library. It takes one parameter, your API key.
 
-var m = new mandrill.Mandrill('Fi1hgj6aNP06OJfjfPQZ2Q');
+var m = new mandrill.Mandrill('your_API_key');
 
 // Ping your Mandrill account using the users/ping method
 
