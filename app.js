@@ -8,10 +8,17 @@ function log(obj) {
 
 var m = new mandrill.Mandrill('Fi1hgj6aNP06OJfjfPQZ2Q');
 
-// Ping your Mandrill account using the users/ping method
+var content = {
+	"message": {
+		"from_email":"jake.therrien13@gmail.com",
+		"to":[{"email":"jake.therrien13@gmail.com"}],
+		"subject":"Mandrill Test",
+		"text":"This is my first time using Mandrill!"
+	}
+};
 
-m.users.ping(function(res) {
-    log(res);
-    }, function(err) {
-    log(err);
-    });
+// send the email
+function sendTheMail() {
+	m.messages.send(content);
+	console.log("email sent successfully!");
+};
